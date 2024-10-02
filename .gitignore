@@ -1,0 +1,16 @@
+# Archivos de compilación
+*.class
+*.jar
+
+# Directorios de compilación
+/build/
+/dist/
+
+# Archivos de configuración de IDEs
+/.idea/
+/.vscode/
+/nbproject/
+
+# Archivos temporales
+*.log
+*.tmp
