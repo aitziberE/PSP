@@ -21,11 +21,12 @@ public class Main{
         // invocando run() -> ejecución secuencial. 
         
         //Crea un hilo que muestre por pantalla los primeros 50 números enteros a intervalos de 100 milisegundos.
-        CaseARunnable r1 = new CaseARunnable();
-        CaseAThread t1 = new CaseAThread();
+//        CaseARunnable r1 = new CaseARunnable();
+//        CaseAThread t1 = new CaseAThread();
        
         //Crea un hilo que pida un número N, y luego muestre por pantalla los primeros N números enteros a intervalos de 100 milisegundos.
-
+        CaseBRunnable r2 = new CaseBRunnable();
+//        CaseBThread t2 = new CaseBThread();
         
         //Crea un hilo que pida un número N, luego un número M. Se crearán M Hilos, cada uno de los cuales mostrará por pantalla los primeros N números enteros a intervalos de 100 milisegundos.
            
