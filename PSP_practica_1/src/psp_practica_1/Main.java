@@ -5,6 +5,9 @@
  */
 package psp_practica_1;
 
+import java.util.ArrayList;
+import utilidades.Util;
+
 /**
  *
  * @author Aitziber
@@ -25,13 +28,31 @@ public class Main{
 //        CaseAThread t1 = new CaseAThread();
        
         //Crea un hilo que pida un número N, y luego muestre por pantalla los primeros N números enteros a intervalos de 100 milisegundos.
-        CaseBRunnable r2 = new CaseBRunnable();
+//        CaseBRunnable r2 = new CaseBRunnable();
 //        CaseBThread t2 = new CaseBThread();
         
         //Crea un hilo que pida un número N, luego un número M. Se crearán M Hilos, cada uno de los cuales mostrará por pantalla los primeros N números enteros a intervalos de 100 milisegundos.
-           
         
-              
+        int n=getPositiveNumber();
+        int m=getPositiveNumber();
+        
+        //ArrayList<CaseCRunnable> threadList = new ArrayList>();
+        
+        for (int i=0; i<m;i++){
+            CaseCRunnable task = new CaseCRunnable(n);
+            Thread thread = new Thread(task);
+            thread.start();
+        }         
+    }
+    public static int getPositiveNumber(){
+        int num;
+        do {
+            num = Util.leerInt("Introduce un numero");
+            if (num < 0) {
+                System.out.println("El número debe ser positivo.");
+            }
+        } while (num < 0);
+        return num;
     }
     
 }
